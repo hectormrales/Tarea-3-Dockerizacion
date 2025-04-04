@@ -6,94 +6,104 @@
     <title>Login</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
         .container {
-            width: 300px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .login-form {
+            width: 350px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
         .login-form h2 {
-            color: #004281; /* Azul IPN */
-            margin-bottom: 20px;
+            color: #006064;
+            margin-bottom: 30px;
+            font-size: 24px;
         }
 
         .input-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            text-align: left;
         }
 
         .input-group label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            color: #00796b;
+            font-size: 14px;
         }
 
         .input-group input {
             width: 100%;
-            height: 40px;
-            padding: 5px;
-            border: 1px solid #ccc;
+            padding: 10px;
+            border: 1px solid #b2dfdb;
             border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #004d40;
+            outline: none;
         }
 
         .btn-login {
-            background-color: #004281; /* Azul IPN */
-            color: #fff;
+            background-color: #00796b;
+            color: #ffffff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s;
             width: 100%;
+            margin-top: 10px;
         }
 
         .btn-login:hover {
-            background-color: #00355b; /* Azul IPN oscuro */
+            background-color: #004d40;
         }
 
         .btn-register {
-            background-color: #008000; /* Verde */
-            color: #fff;
-            padding: 8px 20px;
+            background-color: #004d40;
+            color: #ffffff;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 15px;
-            width: 70%;
+            font-size: 16px;
             text-decoration: none;
             display: inline-block;
-            text-align: center;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+            width: 100%;
         }
 
         .btn-register:hover {
-            background-color: #005b00; /* Verde oscuro */
-        }
-
-        .input-group input:focus {
-            border: 1px solid #004281; /* Azul IPN */
-            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            background-color: #00251a;
         }
 
         .escudo {
-            width: 100px;
-            height: 90px;
-            margin: 20px auto;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="login-form">
-            <img src="https://www.escom.ipn.mx/images/logoESCOM2x.png" alt="ESCOM IPN" class="escudo">
+            <img src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png" alt="LOGINM" class="escudo">
             <h2>Inicio de sesión</h2>
             <form action="/login" method="post">
                 <div class="input-group">
@@ -106,7 +116,6 @@
                 </div>
                 <button type="submit" class="btn-login">Iniciar sesión</button>
             </form>
-            <!-- Botón para redirigir al formulario de registro -->
             <a href="/register" class="btn-register">Registrar nuevo usuario</a>
         </div>
     </div>

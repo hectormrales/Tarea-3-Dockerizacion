@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Usuarios</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #004281; /* Azul IPN */
-            text-align: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: #004281;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #006064;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #00796b;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #004d40;
         }
 
         table {
@@ -47,8 +57,8 @@
         }
 
         table th {
-            background-color: #004281; /* Azul IPN */
-            color: white;
+            background-color: #00796b;
+            color: #ffffff;
         }
 
         table tr:nth-child(even) {
@@ -62,41 +72,38 @@
         .actions a {
             margin-right: 10px;
             padding: 5px 10px;
-            background-color: #004281; /* Azul IPN */
-            color: #fff;
+            background-color: #00796b;
+            color: #ffffff;
             border-radius: 3px;
             text-decoration: none;
             font-size: 0.9em;
+            transition: background-color 0.3s;
         }
 
         .actions a:hover {
-            background-color: #00355b; /* Azul IPN oscuro */
+            background-color: #004d40;
         }
 
         .create-user {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 15px;
-            background-color: #004281; /* Azul IPN */
-            color: white;
+            background-color: #00796b;
+            color: #ffffff;
             border-radius: 5px;
             text-decoration: none;
+            transition: background-color 0.3s;
         }
 
         .create-user:hover {
-            background-color: #00355b; /* Azul IPN oscuro */
-        }
-
-        .back-link {
-            margin-bottom: 20px;
-            display: inline-block;
+            background-color: #004d40;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Gestión de Usuarios</h1>
-        <a href="/admin" class="back-link">Regresar</a>
+        <a href="/admin" class="back-link">← Regresar</a>
         <table>
             <thead>
                 <tr>
@@ -107,14 +114,13 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Iteración para mostrar usuarios -->
                 <tr th:each="usuario : ${usuarios}">
                     <td th:text="${usuario.id}">ID</td>
                     <td th:text="${usuario.nombre}">Nombre</td>
                     <td th:text="${usuario.email}">Email</td>
                     <td class="actions">
                         <a th:href="@{'/admin/users/edit/' + ${usuario.id}}">Editar</a>
-                        <a th:href="@{'/admin/users/delete/' + ${usuario.id}}" style="background-color: red;">Eliminar</a>
+                        <a th:href="@{'/admin/users/delete/' + ${usuario.id}}" class="delete-link">Eliminar</a>
                     </td>
                 </tr>
             </tbody>

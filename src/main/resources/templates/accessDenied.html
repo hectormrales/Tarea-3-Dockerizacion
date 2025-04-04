@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error</title>
+    <title>Acceso Denegado</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 400px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #d32f2f;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .message {
+            font-size: 16px;
+            color: #b71c1c;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #004d40;
+        }
+    </style>
 </head>
 <body>
-    <h1>Noooooo mi compa !</h1>
+    <div class="container">
+        <h1>Acceso Denegado</h1>
+        <p class="message">No tienes los permisos necesarios para acceder a esta página.</p>
+        <a href="/" class="back-link">Volver al Inicio</a>
+    </div>
 </body>
 </html>

@@ -6,95 +6,113 @@
     <title>Home - Administrador</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
         .container {
-            width: 400px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 450px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         h1 {
-            color: #004281; /* Azul IPN */
-            text-align: center;
+            color: #006064;
+            margin-bottom: 30px;
+            font-size: 24px;
         }
 
         .message {
-            font-size: 1.2em;
-            color: #666;
-            text-align: center;
-            margin: 20px 0;
+            font-size: 16px;
+            color: #00796b;
+            margin-bottom: 20px;
         }
 
         .profile-section {
+            text-align: left;
             margin-top: 20px;
         }
 
         .profile-section h2 {
-            color: #004281; /* Azul IPN */
-            margin-top: 0;
+            color: #004d40;
+            margin-bottom: 15px;
+            font-size: 20px;
         }
 
         .profile-section ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         .profile-section li {
-            margin: 10px 0;
-            font-size: 0.9em;
-            color: #333;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #004d40;
+        }
+
+        .profile-section li strong {
+            font-weight: bold;
         }
 
         .menu {
+            text-align: left;
             margin-top: 30px;
         }
 
         .menu h2 {
-            color: #004281; /* Azul IPN */
-            margin-bottom: 10px;
+            color: #00796b;
+            margin-bottom: 15px;
+            font-size: 18px;
         }
 
         .menu ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         .menu li {
-            margin: 10px 0;
+            margin-bottom: 10px;
         }
 
         .menu a {
             display: block;
-            background-color: #004281; /* Azul IPN */
-            color: #fff;
+            background-color: #00796b;
+            color: #ffffff;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             text-align: center;
-            transition: background-color 0.2s ease;
+            transition: background-color 0.3s;
         }
 
         .menu a:hover {
-            background-color: #00355b; /* Azul IPN oscuro */
+            background-color: #004d40;
         }
 
         .logout-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            color: #004281;
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: #ffffff;
+            border-radius: 5px;
             text-decoration: none;
-            font-size: 0.9em;
+            font-size: 16px;
+            transition: background-color 0.3s;
         }
 
         .logout-link:hover {
-            text-decoration: underline;
+            background-color: #004d40;
         }
     </style>
 </head>
